@@ -1,31 +1,59 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
 
-.container{
+
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
+.container {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 2;
+}
+
+.left-part,
+.right-part {
+  height: 100%;
+}
+
+.left-part {
+  width: 40%;
+  float: left;
+}
+
+.left-part > img{
     width: 100%;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-   aspect-ratio: 2;
-    
-}
-
-.left-part,.right-part{
     height: 100%;
 }
 
-.left-part{
-    width: 40%;
-    float: left;
-    background-color: rebeccapurple;
+.right-part {
+  width: 60%;
+  float: right;
+  padding: 3vw 0px 3vw 10vw;
+  box-sizing: border-box;
 }
 
-.right-part{
-    width: 60%;
-    float: right;
-    background-color: red;
+.description-part{
+    width: 100%;
+    padding: 0px 20vw 0px 0px;
+    box-sizing: border-box;
+    font-size: 1.5vw;
 }
+
+
+.description-part > h1{
+    font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    font-weight:700;
+}
+
+.description-part > h5{
+    font-family: 'Avenir', sans-serif;
+    color: #666666;
+    line-height: 1.5vw;
+}
+
 
