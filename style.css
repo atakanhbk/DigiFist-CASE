@@ -33,15 +33,15 @@ body {
 .right-part {
   width: 60%;
   float: right;
-  padding: 3vw 0px 3vw 10vw;
+  padding: 1vw 0px 3vw 10vw;
   box-sizing: border-box;
 }
 
 .description-part{
     width: 100%;
-    padding: 0px 20vw 0px 0px;
+    padding: 0px 13vw 0px 0px;
     box-sizing: border-box;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 
 
@@ -50,10 +50,26 @@ body {
     font-weight:700;
 }
 
+
+
 .description-part > h5{
     font-family: 'Avenir', sans-serif;
     color: #666666;
-    line-height: 1.5vw;
+    line-height: 2vw;
+    font-weight: 100;
+}
+
+.description-part > button{
+    background: none;
+    border: 0px;
+    font-size: 1vw;
+    padding: 0px;
+    border-bottom: 1px solid black;
+    margin: 1vw 0px;
+}
+
+.description-part > button > h5{
+    margin: 0.5vw 0px;
 }
 
 
