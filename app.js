@@ -1,6 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const firstCardWidth = carousel.querySelector(".product-card").offsetWidth;
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const carouselChildrens = [...carousel.children];
 
@@ -72,7 +72,7 @@ const infiniteScroll = () => {
 const autoPlay = () => {
     if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
     // Autoplay the carousel after every 2500 ms
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+   // timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
 }
 autoPlay();
 
