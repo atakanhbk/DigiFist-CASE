@@ -2,8 +2,7 @@ body {
   margin: 0px;
 }
 
-
-@import url('https://fonts.cdnfonts.com/css/avenir');
+@import url("https://fonts.cdnfonts.com/css/avenir");
 
 .container {
   width: 100%;
@@ -17,10 +16,10 @@ body {
   box-sizing: border-box;
 }
 
-.card{
-    width: 100%;
-    height: 100%;
-    border: 1px solid gray;
+.card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
 }
 
 .left-part,
@@ -33,9 +32,9 @@ body {
   float: left;
 }
 
-.left-part > img{
-    width: 100%;
-    height: 100%;
+.left-part > img {
+  width: 100%;
+  height: 100%;
 }
 
 .right-part {
@@ -45,118 +44,137 @@ body {
   box-sizing: border-box;
 }
 
-.description-part{
-    width: 100%;
-    padding: 0px 20vw 0px 0px;
-    box-sizing: border-box;
-    font-size: 1.1vw;
+.description-part {
+  width: 100%;
+  padding: 0px 20vw 0px 0px;
+  box-sizing: border-box;
+  font-size: 1.1vw;
 }
 
-
-.description-part > h1{
-    font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
- 
+.description-part > h1 {
+  font-family: Avant Garde, Avantgarde, Century Gothic, CenturyGothic,
+    AppleGothic, sans-serif;
 }
 
-.description-part > h5{
-    font-family: 'Avenir', sans-serif;
-    color: #666666;
-    line-height: 1.5vw;
-    font-weight: 100;
+.description-part > h5 {
+  font-family: "Avenir", sans-serif;
+  color: #666666;
+  line-height: 1.5vw;
+  font-weight: 100;
 }
 
-.description-part > button{
-    background: none;
-    border: 0px;
-    font-size: 1vw;
-    padding: 0px;
-    border-bottom: 1px solid black;
-    margin: 1vw 0px;
+.description-part > button {
+  background: none;
+  border: 0px;
+  font-size: 1vw;
+  padding: 0px;
+  border-bottom: 1px solid black;
+  margin: 1vw 0px;
 }
 
-.description-part > button > h5{
-    margin: 0.5vw 0px;
+.description-part > button > h5 {
+  margin: 0.5vw 0px;
 }
 
-
-.shopping-part{
-    height: 50%;
+.shopping-part {
+  height: 50%;
 }
-
-
 
 /* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-
-.wrapper{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
   display: flex;
-  max-width: 1200px;
-  height: 100%;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to left top, #031a9a, #8b53ff);
+}
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
   position: relative;
 }
-.wrapper i{
+.wrapper i {
   top: 50%;
-  height: 44px;
-  width: 44px;
-  color: #343F4F;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   position: absolute;
   text-align: center;
-  line-height: 44px;
+  line-height: 50px;
   background: #fff;
   border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
-.wrapper i:active{
-  transform: translateY(-50%) scale(0.9);
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
 }
-.wrapper i:hover{
-  background: #f2f2f2;
-}
-.wrapper i:first-child{
+.wrapper i:first-child {
   left: -22px;
-  display: none;
 }
-.wrapper i:last-child{
+.wrapper i:last-child {
   right: -22px;
 }
-.wrapper .carousel{
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-.carousel.dragging{
-  cursor: grab;
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
   scroll-behavior: auto;
 }
-.carousel.dragging img{
-  pointer-events: none;
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
-.carousel img{
-  height: 340px;
-  object-fit: cover;
+.carousel.dragging .card {
+  cursor: grab;
   user-select: none;
-  margin-left: 14px;
-  width: calc(100% / 3);
-  object-fit: contain;
 }
-.carousel img:first-child{
-  margin-left: 0px;
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
 }
 
+
 @media screen and (max-width: 900px) {
-  .carousel img{
-    width: calc(100% / 2);
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
   }
 }
 
-@media screen and (max-width: 550px) {
-  .carousel img{
-    width: 100%;
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
   }
 }
