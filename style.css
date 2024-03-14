@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+   aspect-ratio: 2;
+    
+}
+
+.left-part,.right-part{
+    height: 100%;
+}
+
+.left-part{
+    width: 40%;
+    float: left;
+    background-color: rebeccapurple;
+}
+
+.right-part{
+    width: 60%;
+    float: right;
+    background-color: red;
+}
+
