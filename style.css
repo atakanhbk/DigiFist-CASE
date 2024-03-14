@@ -108,7 +108,6 @@ h1 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  cursor: grab;
   /* border-top: 10px solid #f00; */
 }
 
@@ -117,18 +116,19 @@ h1 {
   top: 0;
   left: 0;
   display: grid;
-  grid-template-columns: repeat(6, 300px);
-  grid-gap: 50px;
+  grid-template-columns: repeat(6, 20vw);
   pointer-events: none;
   height: 100%;
+  cursor: none;
 }
 
 .card {
-  border: 1px solid #ccc;
   overflow: hidden;
   box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
   width: 15vw;
-    height: auto;
+  height: auto;
+  pointer-events: none;
+  cursor: none;
 }
 
 .card__content {
@@ -136,14 +136,46 @@ h1 {
   padding: 1rem;
 }
 
-.product-image{
-    width: 100%;
-    height: 80%;
+.product-image {
+  width: 100%;
+  height: 80%;
 }
 
-.product-image > img{
-    width: 100%;
-    height: 100%;
+.product-image > img {
+  width: 100%;
+  height: 100%;
+}
 
+.product-description {
+  padding: 0.5vw;
+  box-sizing: border-box;
+}
+
+.product-title {
+  font-size: 1vw;
+}
+
+.product-property {
+  margin: 0.5vw 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-property > span {
+  display: inline-block;
+  font-size: 1vw;
+}
+
+.product-colors{
+    display: flex;
+    gap: 1vw;
+}
+
+.product-colors > button{
+    border-radius: 50%;
+    border: 0px;
+    width: 10px;
+    height: 10px;
 }
 
