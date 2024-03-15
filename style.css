@@ -11,7 +11,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  aspect-ratio: 2;
+  aspect-ratio: 1.9;
   padding: 0.5vw;
   box-sizing: border-box;
 }
@@ -38,9 +38,10 @@ body {
 }
 
 .right-part {
+  
   width: 60%;
   float: right;
-  padding: 1vw 0px 1vw 10vw;
+  padding: 1.5vw 0px 1vw 10vw;
   box-sizing: border-box;
 }
 
@@ -77,6 +78,7 @@ body {
 }
 
 .shopping-part {
+  margin-top: 2vw;
   height: 55%;
 }
 
@@ -181,7 +183,7 @@ h1 {
   width: 1vw;
   height: 1vw;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 0.2vw solid black;
   box-sizing: border-box;
   left: 50%;
   top: 50%;

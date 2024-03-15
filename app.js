@@ -19,16 +19,31 @@ container.addEventListener("mousemove", (e) => {
   if (!isPressedDown) return;
   e.preventDefault();
   cards.style.left = `${e.offsetX - cursorXSpace}px`;
-  boundCards();
+  boundCards(-200);
 });
 
-function boundCards() {
-  const container_rect = container.getBoundingClientRect();
-  const cards_rect = cards.getBoundingClientRect();
+container.addEventListener("touchstart", (e) => {
+  isPressedDown = true;
+  cursorXSpace = e.touches[0].clientX - cards.offsetLeft;
+});
+
+window.addEventListener("touchend", () => {
+  isPressedDown = false;
+});
+
+container.addEventListener("touchmove", (e) => {
+  if (!isPressedDown) return;
+  e.preventDefault();
+  cards.style.left = `${e.touches[0].clientX - cursorXSpace}px`;
+  boundCards(-50);
+});
+
+function boundCards(Axis) {
+
 
   if (parseInt(cards.style.left) > 0) {
     cards.style.left = 0;
-  } else if (parseInt(cards.style.left) < -200) {
-    cards.style.left = `-200px`;
+  } else if (parseInt(cards.style.left) < Axis) {
+    cards.style.left = `${Axis}px`;
   }
 }
