@@ -155,6 +155,10 @@ h1 {
   font-size: 1vw;
 }
 
+.product-title > span {
+  font-family: "Avenir", sans-serif;
+}
+
 .product-property {
   margin: 0.5vw 0px;
   display: flex;
@@ -165,17 +169,59 @@ h1 {
 .product-property > span {
   display: inline-block;
   font-size: 1vw;
+  font-weight: bold;
 }
 
-.product-colors{
-    display: flex;
-    gap: 1vw;
+.product-colors {
+  display: flex;
+  gap: 1vw;
 }
 
-.product-colors > button{
-    border-radius: 50%;
-    border: 0px;
-    width: 10px;
-    height: 10px;
+.border {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  padding: 8px;
 }
 
+.product-colors > button {
+  border-radius: 50%;
+  border: 0px;
+  width: 10px;
+  height: 10px;
+}
+
+.color-selector {
+  display: flex;
+  gap: 0.5rem;
+  
+}
+
+.color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.first {
+  background-color: #99c3cc;
+}
+
+.second {
+  background-color: #cc9999;
+}
+
+.third {
+  background-color: #cb99cc;
+}
+
+.fourth {
+  background-color: #a6cc99;
+}

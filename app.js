@@ -28,7 +28,7 @@ function boundCards() {
 
   if (parseInt(cards.style.left) > 0) {
     cards.style.left = 0;
-  } else if (cards_rect.right < container_rect.right) {
-    cards.style.left = `-${cards_rect.width - container_rect.width}px`;
+  } else if (parseInt(cards.style.left) < -200) {
+    cards.style.left = `-200px`;
   }
 }
