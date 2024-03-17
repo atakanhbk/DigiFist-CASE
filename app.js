@@ -1,6 +1,13 @@
 const container = document.querySelector(".card-container");
 const cards = document.querySelector(".cards");
 
+
+
+const containerStyle = window.getComputedStyle(container);
+const cardsStyle = window.getComputedStyle(cards);
+console.log(parseInt(containerStyle.width));
+console.log(parseInt(cardsStyle.width));
+
 /* keep track of user's mouse down and up */
 let isPressedDown = false;
 /* x horizontal space of cursor from inner container */
@@ -19,7 +26,8 @@ container.addEventListener("mousemove", (e) => {
   if (!isPressedDown) return;
   e.preventDefault();
   cards.style.left = `${e.offsetX - cursorXSpace}px`;
-  boundCards(-200);
+  boundCards(parseInt(cardsStyle.width)- parseInt(containerStyle.width));
+
 });
 
 container.addEventListener("touchstart", (e) => {
@@ -35,7 +43,8 @@ container.addEventListener("touchmove", (e) => {
   if (!isPressedDown) return;
   e.preventDefault();
   cards.style.left = `${e.touches[0].clientX - cursorXSpace}px`;
-  boundCards(-50);
+
+  boundCards(parseInt(cardsStyle.width)- parseInt(containerStyle.width));
 });
 
 function boundCards(Axis) {
@@ -43,7 +52,7 @@ function boundCards(Axis) {
 
   if (parseInt(cards.style.left) > 0) {
     cards.style.left = 0;
-  } else if (parseInt(cards.style.left) < Axis) {
-    cards.style.left = `${Axis}px`;
+  } else if (parseInt(cards.style.left) < -Axis) {
+    cards.style.left = `${-Axis}px`;
   }
 }
